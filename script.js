@@ -13,8 +13,11 @@ const startBtn = document.querySelector("#start")
 const clearBtn = document.querySelector('#clearTime')
 const saveBtn = document.querySelector('#save')
 const savedTimeDiv = document.querySelector('.saved-time-body')
+const savedTimeContainer = document.querySelector('.saved-time')
 
-
+if(savedTime.length < 1 ) {
+    savedTimeContainer.style.display = 'none'
+}
 
 
 function getHour() {
@@ -61,6 +64,7 @@ function clearTimer() {
 }
 
 function renderSavedTime(data = []) {
+    savedTimeContainer.style.display = 'flex'
     let html = data.map((item, index) => {
         let string = `<div class="saved-time-item"><div> ${item.initialHour} </div> <div>${item.hour < 10 ? '0' + item.hour : item.hour} : ${item.minutes < 10 ? '0' + item.minutes : item.minutes} : ${item.seconds < 10 ? '0' + item.seconds : item.seconds}</div> <div>${item.stoppedtime}</div></div>`
         return string
