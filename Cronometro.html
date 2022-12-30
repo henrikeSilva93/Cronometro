@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <span class="timer">00:00:00</span>
+        <div>
+            <button class="btn" id="start">Iniciar</button>
+            <button class="btn" id="stop">pausar</button>
+            <button class="btn" id="clearTime" onclick="clearTimer()">Zerar</button>
+            <button class="btn" id="save">Salvar tempo</button>
+        </div>
+        <h3>Tempos Cronometrados</h3>
+        <div class="saved-time">
+            <div class="saved-header">
+                <div>Hora inicial</div>
+                <div>tempo cronometrado</div>
+                <div>Hora final</div>
+            </div>
+            <div class="saved-time-body">
+
+            </div>
+            <script src="script.js"></script>
+        </div>
+
+    </div>
+</body>
+
+</html>
