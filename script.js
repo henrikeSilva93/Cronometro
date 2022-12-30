@@ -62,11 +62,9 @@ function clearTimer() {
 
 function renderSavedTime(data = []) {
     let html = data.map((item, index) => {
-        console.log(item)
         let string = `<div class="saved-time-item"><div> ${item.initialHour} </div> <div>${item.hour < 10 ? '0' + item.hour : item.hour} : ${item.minutes < 10 ? '0' + item.minutes : item.minutes} : ${item.seconds < 10 ? '0' + item.seconds : item.seconds}</div> <div>${item.stoppedtime}</div></div>`
         return string
     }).join('')
-    console.log(html)
     savedTimeDiv.innerHTML = html
 }
 
@@ -74,7 +72,6 @@ function savedTimeFunction() {
 
     savedTime.push({ hour, minutes, seconds, initialHour: startTime, stoppedtime: stopTime })
     renderSavedTime(savedTime)
-    console.log(savedTime)
 }
 
 startBtn.addEventListener('click', start)
